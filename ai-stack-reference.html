@@ -345,6 +345,24 @@
     .card.tts-card::before { background: #ff9800; }
     .card.llm-card::before { background: #e91e63; }
 
+    /* Card links */
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      background: #1a1a2e;
+      border: 1px solid #333;
+      border-radius: 6px;
+      color: #60a5fa;
+      font-size: 11px;
+      text-decoration: none;
+      transition: all 0.15s;
+      margin-top: 8px;
+    }
+    .card-link:hover { background: #252545; border-color: #60a5fa; color: #90c5ff; }
+    .card-links { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+
     /* scroll anchor offset */
     .anchor { scroll-margin-top: 20px; }
 
@@ -461,6 +479,10 @@
         <div class="detail-row"><span class="detail-key">중간 결과</span><span class="detail-val">있음 (interim)</span></div>
         <div class="detail-row"><span class="detail-key">노이즈 내성</span><span class="detail-val">매우 강함</span></div>
         <div class="feature-highlight">WebSocket으로 ~100ms 실시간 전사. 잡음 환경에서도 안정적. 현재 ElectronTranslator에서 상대방 STT에 사용 중.</div>
+        <div class="card-links">
+          <a href="https://deepgram.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">사이트</a>
+          <a href="https://console.deepgram.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Console</a>
+        </div>
       </div>
     </div>
 
@@ -500,6 +522,10 @@
         <div class="detail-row"><span class="detail-key">모델</span><span class="detail-val">whisper-large-v3</span></div>
         <div class="detail-row"><span class="detail-key">하드웨어</span><span class="detail-val">LPU (초고속 추론)</span></div>
         <div class="feature-highlight">OpenAI Whisper를 Groq LPU에서 실행. 무료 한도 넉넉함. ElectronTranslator에서 나의 STT에 사용 중. 약 700ms 딜레이는 API 왕복이 대부분.</div>
+        <div class="card-links">
+          <a href="https://groq.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">사이트</a>
+          <a href="https://console.groq.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Console</a>
+        </div>
       </div>
     </div>
 
@@ -538,6 +564,9 @@
         <div class="detail-row"><span class="detail-key">가격</span><span class="detail-val">유료 전용</span></div>
         <div class="detail-row"><span class="detail-key">특징</span><span class="detail-val">Whisper 후계 모델</span></div>
         <div class="feature-highlight">최고 정확도. Whisper를 능가하는 GPT-4o 기반 전사. 유료지만 품질 최상.</div>
+        <div class="card-links">
+          <a href="https://platform.openai.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Console</a>
+        </div>
       </div>
     </div>
 
@@ -576,6 +605,9 @@
         <div class="detail-row"><span class="detail-key">가격</span><span class="detail-val">$0.006/분</span></div>
         <div class="detail-row"><span class="detail-key">다국어 지원</span><span class="detail-val">99개 언어</span></div>
         <div class="feature-highlight">Whisper 원조. 99개 언어 지원으로 가장 범용적인 다국어 모델. 단 느린 편.</div>
+        <div class="card-links">
+          <a href="https://platform.openai.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Console</a>
+        </div>
       </div>
     </div>
 
@@ -614,6 +646,10 @@
         <div class="detail-row"><span class="detail-key">모델</span><span class="detail-val">Slam-1</span></div>
         <div class="detail-row"><span class="detail-key">특징</span><span class="detail-val">안전 필터 내장, 무료 티어</span></div>
         <div class="feature-highlight">LiveKit Agents에서 공식 지원. Slam-1 자체 모델 사용. 안전 관련 필터 내장.</div>
+        <div class="card-links">
+          <a href="https://www.assemblyai.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">사이트</a>
+          <a href="https://www.assemblyai.com/dashboard/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Console</a>
+        </div>
       </div>
     </div>
 
@@ -652,6 +688,9 @@
         <div class="detail-row"><span class="detail-key">한국어 품질</span><span class="detail-val">최고 수준</span></div>
         <div class="detail-row"><span class="detail-key">지원 언어</span><span class="detail-val">125개+</span></div>
         <div class="feature-highlight">한국어 STT 품질 최고. Chrome Web Speech API가 내부적으로 Google 사용. 가장 많은 언어 지원.</div>
+        <div class="card-links">
+          <a href="https://cloud.google.com/speech-to-text" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Docs</a>
+        </div>
       </div>
     </div>
 
@@ -690,6 +729,9 @@
         <div class="detail-row"><span class="detail-key">커스텀 모델</span><span class="detail-val">가능</span></div>
         <div class="detail-row"><span class="detail-key">특징</span><span class="detail-val">Edge TTS와 동일 회사</span></div>
         <div class="feature-highlight">Edge 브라우저 Web Speech API가 내부적으로 Azure 사용. 커스텀 발음 모델 훈련 가능.</div>
+        <div class="card-links">
+          <a href="https://azure.microsoft.com/en-us/products/ai-services/speech-to-text" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">사이트</a>
+        </div>
       </div>
     </div>
 
@@ -728,6 +770,9 @@
         <div class="detail-row"><span class="detail-key">Edge</span><span class="detail-val">= Azure STT</span></div>
         <div class="detail-row"><span class="detail-key">API 키</span><span class="detail-val">불필요</span></div>
         <div class="feature-highlight">완전 무료, 설정 불필요. Chrome은 Google, Edge는 Azure 백엔드. Tauri WebView2(= Edge)에서 완벽 지원.</div>
+        <div class="card-links">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Docs</a>
+        </div>
       </div>
     </div>
 
@@ -767,6 +812,9 @@
         <div class="detail-row"><span class="detail-key">요구사항</span><span class="detail-val">GPU 권장 (CPU 가능)</span></div>
         <div class="detail-row"><span class="detail-key">파생 프로젝트</span><span class="detail-val">faster-whisper, whisper.cpp</span></div>
         <div class="feature-highlight">인터넷 불필요, 완전 무료. faster-whisper(CTranslate2) 사용 시 GPU에서 실시간급 속도 가능.</div>
+        <div class="card-links">
+          <a href="https://github.com/openai/whisper" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">GitHub</a>
+        </div>
       </div>
     </div>
 
@@ -814,6 +862,9 @@
         <div class="detail-row"><span class="detail-key">주의사항</span><span class="detail-val">비공식 엔드포인트, 한도 불명확</span></div>
         <div class="detail-row"><span class="detail-key">언어</span><span class="detail-val">134개+</span></div>
         <div class="feature-highlight">현재 ElectronTranslator에서 사용 중. API 키 불필요. 비공식 엔드포인트이므로 요청 과다 시 차단 가능.</div>
+        <div class="card-links">
+          <a href="https://github.com/vitalets/google-translate-api" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">GitHub</a>
+        </div>
       </div>
     </div>
 
@@ -847,6 +898,9 @@
         <div class="detail-row"><span class="detail-key">추가 요금</span><span class="detail-val">$20/백만자</span></div>
         <div class="detail-row"><span class="detail-key">언어</span><span class="detail-val">134개</span></div>
         <div class="feature-highlight">공식 API로 안정적. 월 50만자 무료. Google 비공식 한도 초과 시 대체재.</div>
+        <div class="card-links">
+          <a href="https://cloud.google.com/translate" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Docs</a>
+        </div>
       </div>
     </div>
 
@@ -880,6 +934,10 @@
         <div class="detail-row"><span class="detail-key">강점</span><span class="detail-val">유럽 언어 최강</span></div>
         <div class="detail-row"><span class="detail-key">한국어</span><span class="detail-val">지원 (품질 양호)</span></div>
         <div class="feature-highlight">자연스러운 번역 품질로 유명. 유럽 언어(영독불스이) 최상. 한국어도 지원하나 Papago보다 KR 품질은 낮음.</div>
+        <div class="card-links">
+          <a href="https://www.deepl.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">사이트</a>
+          <a href="https://www.deepl.com/pro-api" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">API</a>
+        </div>
       </div>
     </div>
 
@@ -946,6 +1004,9 @@
         <div class="detail-row"><span class="detail-key">전문 용어</span><span class="detail-val">커스텀 프롬프트로 제어</span></div>
         <div class="detail-row"><span class="detail-key">속도</span><span class="detail-val">느림 (실시간 불적합)</span></div>
         <div class="feature-highlight">문맥과 뉘앙스 이해 최고. 단 1~3초 딜레이로 실시간 통역에는 부적합. 문서 번역에 적합.</div>
+        <div class="card-links">
+          <a href="https://platform.openai.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Console</a>
+        </div>
       </div>
     </div>
 
@@ -980,6 +1041,10 @@
         <div class="detail-row"><span class="detail-key">프라이버시</span><span class="detail-val">완전 오프라인</span></div>
         <div class="detail-row"><span class="detail-key">품질</span><span class="detail-val">Argos Translate 기반, 중간 수준</span></div>
         <div class="feature-highlight">완전 오픈소스, 셀프 호스팅 가능. 프라이버시 중요 환경에 적합. 품질은 상용 서비스 대비 낮음.</div>
+        <div class="card-links">
+          <a href="https://libretranslate.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">사이트</a>
+          <a href="https://github.com/LibreTranslate/LibreTranslate" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">GitHub</a>
+        </div>
       </div>
     </div>
 
@@ -1069,6 +1134,10 @@
         <div class="detail-row"><span class="detail-key">감정 태그</span><span class="detail-val">[excited], [whisper] 등 지원</span></div>
         <div class="detail-row"><span class="detail-key">한국어</span><span class="detail-val">제한적 지원</span></div>
         <div class="feature-highlight">업계 최저 지연시간. LiveKit Agents 공식 통합. 감정 태그 지원으로 표현력 있는 TTS 구현 가능.</div>
+        <div class="card-links">
+          <a href="https://cartesia.ai/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">사이트</a>
+          <a href="https://play.cartesia.ai/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Playground</a>
+        </div>
       </div>
     </div>
 
@@ -1107,6 +1176,9 @@
         <div class="detail-row"><span class="detail-key">음성 수</span><span class="detail-val">3,000개+ (클로닝 포함)</span></div>
         <div class="detail-row"><span class="detail-key">음성 클로닝</span><span class="detail-val">가능 (유료)</span></div>
         <div class="feature-highlight">가장 자연스러운 음성 품질. 3,000개 이상 음성, 음성 클로닝 지원. LiveKit Agents 통합.</div>
+        <div class="card-links">
+          <a href="https://elevenlabs.io/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">사이트</a>
+        </div>
       </div>
     </div>
 
@@ -1180,6 +1252,9 @@
         <div class="detail-row"><span class="detail-key">가격</span><span class="detail-val">$0.015~0.030/천자</span></div>
         <div class="detail-row"><span class="detail-key">음성</span><span class="detail-val">alloy, echo, nova, shimmer 등</span></div>
         <div class="feature-highlight">자연스러움 최고 수준. 유료 전용이지만 품질 대비 가격 합리적. 한국어도 자연스러움.</div>
+        <div class="card-links">
+          <a href="https://platform.openai.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Console</a>
+        </div>
       </div>
     </div>
 
@@ -1217,6 +1292,9 @@
         <div class="detail-row"><span class="detail-key">한국어 음성</span><span class="detail-val">WaveNet, Journey 등</span></div>
         <div class="detail-row"><span class="detail-key">특화</span><span class="detail-val">한국어 TTS 최고 품질</span></div>
         <div class="feature-highlight">한국어 TTS 품질 최고. 무료 한도 넉넉(월 400만자). Journey 음성은 매우 자연스러움.</div>
+        <div class="card-links">
+          <a href="https://cloud.google.com/text-to-speech" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Docs</a>
+        </div>
       </div>
     </div>
 
@@ -1254,6 +1332,9 @@
         <div class="detail-row"><span class="detail-key">참고</span><span class="detail-val">Edge TTS = Azure TTS 동일 엔진</span></div>
         <div class="detail-row"><span class="detail-key">한국어 음성</span><span class="detail-val">SunHi, InJoon 등</span></div>
         <div class="feature-highlight">Edge TTS(msedge-tts)와 동일 엔진의 공식 버전. API 키 사용 시 더 안정적이고 월 50만자 무료.</div>
+        <div class="card-links">
+          <a href="https://azure.microsoft.com/en-us/products/ai-services/text-to-speech" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">사이트</a>
+        </div>
       </div>
     </div>
 
@@ -1338,6 +1419,10 @@
         <div class="detail-row"><span class="detail-key">지원 모델</span><span class="detail-val">Llama 3.3, Gemma 3, DeepSeek, Qwen</span></div>
         <div class="detail-row"><span class="detail-key">무료 한도</span><span class="detail-val">관대함 (모델별 RPM/TPM)</span></div>
         <div class="feature-highlight">맞춤 LPU 칩으로 GPU 대비 5~10배 빠름. 무료 티어 넉넉. 실시간 음성 에이전트에 최적. Whisper STT도 제공.</div>
+        <div class="card-links">
+          <a href="https://groq.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">사이트</a>
+          <a href="https://console.groq.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Console</a>
+        </div>
       </div>
     </div>
 
@@ -1371,6 +1456,10 @@
         <div class="detail-row"><span class="detail-key">지원 모델</span><span class="detail-val">Llama 3.3 70B, Qwen 2.5</span></div>
         <div class="detail-row"><span class="detail-key">특징</span><span class="detail-val">업계 최고 추론 속도</span></div>
         <div class="feature-highlight">웨이퍼 전체를 단일 칩으로 사용하는 혁신적 설계. Groq보다도 빠름. ~2000 tok/s는 사람이 읽는 속도의 20배 이상.</div>
+        <div class="card-links">
+          <a href="https://cloud.cerebras.ai/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Console</a>
+          <a href="https://cerebras.ai/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">사이트</a>
+        </div>
       </div>
     </div>
 
@@ -1401,6 +1490,9 @@
         <div class="detail-row"><span class="detail-key">특징</span><span class="detail-val">Realtime API (E2E 음성)</span></div>
         <div class="detail-row"><span class="detail-key">가격</span><span class="detail-val">$2.50~15/백만 입력 토큰</span></div>
         <div class="feature-highlight">GPT-4o Realtime API = STT+LLM+TTS 통합. 단일 WebSocket으로 ~300ms E2E 지연. 유료 전용.</div>
+        <div class="card-links">
+          <a href="https://platform.openai.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Console</a>
+        </div>
       </div>
     </div>
 
@@ -1431,6 +1523,10 @@
         <div class="detail-row"><span class="detail-key">강점</span><span class="detail-val">긴 컨텍스트, 코드, 분석</span></div>
         <div class="detail-row"><span class="detail-key">음성 API</span><span class="detail-val">없음 (텍스트 전용)</span></div>
         <div class="feature-highlight">코딩·분석 능력 최강. 단 직접 음성 API 없음 → STT+Claude+TTS 조합 필요.</div>
+        <div class="card-links">
+          <a href="https://console.anthropic.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">Console</a>
+          <a href="https://anthropic.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">사이트</a>
+        </div>
       </div>
     </div>
 
@@ -1461,6 +1557,9 @@
         <div class="detail-row"><span class="detail-key">멀티모달</span><span class="detail-val">텍스트+이미지+오디오+영상</span></div>
         <div class="detail-row"><span class="detail-key">Live API</span><span class="detail-val">실시간 음성/영상 대화</span></div>
         <div class="feature-highlight">Gemini 2.0 Flash는 무료 티어 제공. Gemini Live = 실시간 E2E 음성 대화. 멀티모달 최강.</div>
+        <div class="card-links">
+          <a href="https://ai.google.dev/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">사이트</a>
+        </div>
       </div>
     </div>
 
@@ -1492,6 +1591,10 @@
         <div class="detail-row"><span class="detail-key">요구사항</span><span class="detail-val">GPU 8GB+ 권장</span></div>
         <div class="detail-row"><span class="detail-key">프라이버시</span><span class="detail-val">완전 오프라인</span></div>
         <div class="feature-highlight">완전 무료, 오프라인. OpenAI API 호환 엔드포인트 제공. RTX 3080 이상에서 쓸만한 속도.</div>
+        <div class="card-links">
+          <a href="https://ollama.com/" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">사이트</a>
+          <a href="https://github.com/ollama/ollama" target="_blank" rel="noopener" class="card-link" onclick="event.stopPropagation()">GitHub</a>
+        </div>
       </div>
     </div>
 
@@ -1844,6 +1947,7 @@
           <th>지연시간</th>
           <th>가격</th>
           <th>핵심 특징</th>
+          <th>링크</th>
         </tr>
       </thead>
       <tbody>
@@ -1855,6 +1959,7 @@
           <td><span class="t-lat" style="width:20px;background:#4caf50;"></span>~100ms</td>
           <td><span class="t-ltd">$200 크레딧</span></td>
           <td>Interim 결과, 소음에 강함. <b>현재 Them STT</b></td>
+          <td><a href="https://console.deepgram.com/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Console</a></td>
         </tr>
         <tr class="highlight-row">
           <td><span class="svc-name">Groq Whisper</span><span class="svc-co">Groq (LPU)</span></td>
@@ -1864,6 +1969,7 @@
           <td><span class="t-lat" style="width:42px;background:#ff9800;"></span>~700ms</td>
           <td><span class="t-free">무료 2000회/일</span></td>
           <td>Whisper를 LPU로 초고속. <b>현재 Me STT</b></td>
+          <td><a href="https://console.groq.com/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Console</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">gpt-4o-transcribe</span><span class="svc-co">OpenAI</span></td>
@@ -1873,6 +1979,7 @@
           <td><span class="t-lat" style="width:36px;background:#ff9800;"></span>~1s</td>
           <td><span class="t-paid">유료</span></td>
           <td>최고 정확도, Whisper 후속</td>
+          <td><a href="https://platform.openai.com/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Console</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">OpenAI Whisper</span><span class="svc-co">OpenAI</span></td>
@@ -1882,6 +1989,7 @@
           <td><span class="t-lat" style="width:56px;background:#f44336;"></span>2~3s</td>
           <td><span class="t-paid">유료</span></td>
           <td>99개 언어, 가장 범용적</td>
+          <td><a href="https://platform.openai.com/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Console</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">AssemblyAI</span><span class="svc-co">AssemblyAI</span></td>
@@ -1891,6 +1999,7 @@
           <td><span class="t-lat" style="width:28px;background:#4caf50;"></span>~200ms</td>
           <td><span class="t-ltd">무료 tier</span></td>
           <td>Slam-1 모델, 안전 필터 내장</td>
+          <td><a href="https://www.assemblyai.com/dashboard/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Console</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">Google Speech</span><span class="svc-co">Google Cloud</span></td>
@@ -1900,6 +2009,7 @@
           <td><span class="t-lat" style="width:28px;background:#4caf50;"></span>~200ms</td>
           <td><span class="t-free">월 60분</span></td>
           <td>한국어 최고, 125개+ 언어</td>
+          <td><a href="https://cloud.google.com/speech-to-text" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Docs</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">Azure Speech</span><span class="svc-co">Microsoft</span></td>
@@ -1909,6 +2019,7 @@
           <td><span class="t-lat" style="width:28px;background:#4caf50;"></span>~200ms</td>
           <td><span class="t-free">월 5시간</span></td>
           <td>커스텀 모델, 한국어 우수</td>
+          <td><a href="https://azure.microsoft.com/en-us/products/ai-services/speech-to-text" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">사이트</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">Web Speech API</span><span class="svc-co">브라우저 내장</span></td>
@@ -1918,6 +2029,7 @@
           <td><span class="t-lat" style="width:20px;background:#4caf50;"></span>~100ms</td>
           <td><span class="t-free">무료</span></td>
           <td>Chrome=Google, Edge=Azure</td>
+          <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Docs</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">Whisper (로컬)</span><span class="svc-co">오픈소스</span></td>
@@ -1927,6 +2039,7 @@
           <td><span class="t-lat" style="width:48px;background:#ff9800;"></span>GPU 의존</td>
           <td><span class="t-free">무료</span></td>
           <td>오프라인, 프라이버시</td>
+          <td><a href="https://github.com/openai/whisper" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">GitHub</a></td>
         </tr>
       </tbody>
     </table>
@@ -1949,6 +2062,7 @@
           <th>속도</th>
           <th>가격</th>
           <th>핵심 특징</th>
+          <th>링크</th>
         </tr>
       </thead>
       <tbody>
@@ -1959,6 +2073,7 @@
           <td><span class="t-lat" style="width:28px;background:#4caf50;"></span>~200ms</td>
           <td><span class="t-free">무료 (키 불필요)</span></td>
           <td>API 키 없이 사용. <b>현재 사용 중</b></td>
+          <td><a href="https://github.com/vitalets/google-translate-api" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">GitHub</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">Google Cloud Translation</span><span class="svc-co">Google Cloud</span></td>
@@ -1967,6 +2082,7 @@
           <td><span class="t-lat" style="width:28px;background:#4caf50;"></span>~200ms</td>
           <td><span class="t-free">월 50만자</span></td>
           <td>안정적, 134개 언어</td>
+          <td><a href="https://cloud.google.com/translate" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Docs</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">DeepL</span><span class="svc-co">DeepL</span></td>
@@ -1975,6 +2091,7 @@
           <td><span class="t-lat" style="width:34px;background:#cddc39;"></span>~300ms</td>
           <td><span class="t-free">월 50만자</span></td>
           <td>유럽어 최강, 자연스러움</td>
+          <td><a href="https://www.deepl.com/pro-api" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">API</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">Papago</span><span class="svc-co">NAVER / CLOVA</span></td>
@@ -1983,6 +2100,7 @@
           <td><span class="t-lat" style="width:34px;background:#cddc39;"></span>~300ms</td>
           <td><span class="t-ltd">일 1만자</span></td>
           <td>한국어 특화 최고</td>
+          <td>-</td>
         </tr>
         <tr>
           <td><span class="svc-name">LLM 번역</span><span class="svc-co">GPT / Claude / Gemini</span></td>
@@ -1991,6 +2109,7 @@
           <td><span class="t-lat" style="width:60px;background:#f44336;"></span>1~3s</td>
           <td><span class="t-paid">모델별 상이</span></td>
           <td>문맥 이해 최고, 느림</td>
+          <td><a href="https://platform.openai.com/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Console</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">LibreTranslate</span><span class="svc-co">오픈소스</span></td>
@@ -1999,6 +2118,7 @@
           <td><span class="t-lat" style="width:40px;background:#ff9800;"></span>~500ms</td>
           <td><span class="t-free">무료</span></td>
           <td>자체 서버, 프라이버시</td>
+          <td><a href="https://github.com/LibreTranslate/LibreTranslate" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">GitHub</a></td>
         </tr>
       </tbody>
     </table>
@@ -2022,6 +2142,7 @@
           <th>한국어</th>
           <th>가격</th>
           <th>핵심 특징</th>
+          <th>링크</th>
         </tr>
       </thead>
       <tbody>
@@ -2033,6 +2154,7 @@
           <td><span class="t-stars">★★★★★</span></td>
           <td><span class="t-free">무제한 무료</span></td>
           <td>무료 무제한, 한국어 최고. <b>현재 사용 중</b></td>
+          <td><a href="https://azure.microsoft.com/en-us/products/ai-services/text-to-speech" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">사이트</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">Cartesia Sonic</span><span class="svc-co">Cartesia</span></td>
@@ -2042,6 +2164,7 @@
           <td><span class="t-stars">★★★</span><span class="t-dim">☆☆</span></td>
           <td><span class="t-ltd">제한적</span></td>
           <td>업계 최저 지연, 감정 태그</td>
+          <td><a href="https://cartesia.ai/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">사이트</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">ElevenLabs</span><span class="svc-co">ElevenLabs</span></td>
@@ -2051,6 +2174,7 @@
           <td><span class="t-stars">★★★★</span><span class="t-dim">☆</span></td>
           <td><span class="t-ltd">월 1만자</span></td>
           <td>3000+ 음성, 클로닝</td>
+          <td><a href="https://elevenlabs.io/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">사이트</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">Deepgram Aura-2</span><span class="svc-co">Deepgram</span></td>
@@ -2060,6 +2184,7 @@
           <td><span class="t-stars">★★★</span><span class="t-dim">☆☆</span></td>
           <td><span class="t-ltd">크레딧 내</span></td>
           <td>STT+TTS 통합</td>
+          <td><a href="https://console.deepgram.com/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Console</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">OpenAI TTS</span><span class="svc-co">OpenAI</span></td>
@@ -2069,6 +2194,7 @@
           <td><span class="t-stars">★★★★</span><span class="t-dim">☆</span></td>
           <td><span class="t-paid">유료</span></td>
           <td>자연스러움 최상</td>
+          <td><a href="https://platform.openai.com/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Console</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">Google Cloud TTS</span><span class="svc-co">Google Cloud</span></td>
@@ -2078,6 +2204,7 @@
           <td><span class="t-stars">★★★★★</span></td>
           <td><span class="t-free">월 400만자</span></td>
           <td>한국어 TTS 최고, 무료 넉넉</td>
+          <td><a href="https://cloud.google.com/text-to-speech" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Docs</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">Azure TTS</span><span class="svc-co">Microsoft</span></td>
@@ -2087,6 +2214,7 @@
           <td><span class="t-stars">★★★★★</span></td>
           <td><span class="t-free">월 50만자</span></td>
           <td>Edge TTS 공식 버전</td>
+          <td><a href="https://azure.microsoft.com/en-us/products/ai-services/text-to-speech" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">사이트</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">Hume Octave</span><span class="svc-co">Hume AI</span></td>
@@ -2096,6 +2224,7 @@
           <td><span class="t-stars">★★★</span><span class="t-dim">☆☆</span></td>
           <td><span class="t-ltd">제한적</span></td>
           <td>감정 자동 해석 TTS</td>
+          <td>-</td>
         </tr>
       </tbody>
     </table>
@@ -2118,6 +2247,7 @@
           <th>주요 모델</th>
           <th>가격</th>
           <th>핵심 특징</th>
+          <th>링크</th>
         </tr>
       </thead>
       <tbody>
@@ -2128,6 +2258,7 @@
           <td>Llama, Gemma, DeepSeek</td>
           <td><span class="t-free">넉넉한 무료</span></td>
           <td>STT(Whisper)도 제공</td>
+          <td><a href="https://console.groq.com/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Console</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">Cerebras</span><span class="svc-co">Cerebras Systems</span></td>
@@ -2136,6 +2267,7 @@
           <td>Llama, Qwen</td>
           <td><span class="t-free">무료 tier</span></td>
           <td>세계 최대 칩, 극한 속도</td>
+          <td><a href="https://cloud.cerebras.ai/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Console</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">OpenAI</span><span class="svc-co">OpenAI</span></td>
@@ -2144,6 +2276,7 @@
           <td>GPT-4o, o1, o3</td>
           <td><span class="t-paid">유료</span></td>
           <td>최강 범용 LLM</td>
+          <td><a href="https://platform.openai.com/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Console</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">Anthropic</span><span class="svc-co">Anthropic</span></td>
@@ -2152,6 +2285,7 @@
           <td>Claude Opus/Sonnet</td>
           <td><span class="t-paid">유료</span></td>
           <td>코딩 특화, 긴 컨텍스트</td>
+          <td><a href="https://console.anthropic.com/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">Console</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">Google Gemini</span><span class="svc-co">Google</span></td>
@@ -2160,6 +2294,7 @@
           <td>Gemini 2.0 Flash/Pro</td>
           <td><span class="t-free">무료 tier</span></td>
           <td>멀티모달, Live API</td>
+          <td><a href="https://ai.google.dev/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">사이트</a></td>
         </tr>
         <tr>
           <td><span class="svc-name">Ollama (로컬)</span><span class="svc-co">오픈소스</span></td>
@@ -2168,6 +2303,7 @@
           <td>아무거나</td>
           <td><span class="t-free">무료</span></td>
           <td>오프라인, 프라이버시</td>
+          <td><a href="https://ollama.com/" target="_blank" rel="noopener" class="card-link" style="margin-top:0;" onclick="event.stopPropagation()">사이트</a></td>
         </tr>
       </tbody>
     </table>
